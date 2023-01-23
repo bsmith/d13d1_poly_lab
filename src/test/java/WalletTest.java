@@ -74,6 +74,7 @@ public class WalletTest {
         wallet.addItem(ticket);
         for (IScan card : wallet.getCards()) {
             System.out.println(card);
+            System.out.println(card.scan());
         }
 
         ArrayList<IScan> array = new ArrayList<>(Arrays.asList(debitCard, creditCard));
