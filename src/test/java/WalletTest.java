@@ -1,6 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public class WalletTest {
@@ -71,5 +75,7 @@ public class WalletTest {
         for (IScan card : wallet.getCards()) {
             System.out.println(card);
         }
+
+        ArrayList<IScan> array = new ArrayList<>(Arrays.asList(debitCard, creditCard));
     }
 }
