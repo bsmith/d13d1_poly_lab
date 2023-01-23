@@ -61,4 +61,15 @@ public class WalletTest {
         wallet.addItem(ticket);
         assertEquals(4, wallet.getNumberOfItems());
     }
+
+    @Test
+    public void canScanCards() {
+        wallet.addItem(creditCard);
+        wallet.addItem(debitCard);
+        wallet.addItem(loyaltyCard);
+        wallet.addItem(ticket);
+        for (IScan card : wallet.getCards()) {
+            System.out.println(card);
+        }
+    }
 }
